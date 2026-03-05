@@ -1,2 +1,0 @@
-// Add a royalty-free romantic instrumental mp3 file named 'romantic-instrumental.mp3' to this folder for background music.
-// You can use a placeholder for now and replace it with your own music before deployment.
