@@ -1,13 +1,15 @@
 from flask import Flask, render_template, request
 import joblib
 import pandas as pd
+import os
 
 app = Flask(__name__)
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-model = joblib.load("model.pkl")
-scaler = joblib.load("scaler.pkl")
-expected_features = joblib.load("columns.pkl")
+model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
+expected_features = joblib.load(os.path.join(BASE_DIR, "columns.pkl"))
 
 @app.route("/", methods=["GET", "POST"])
 def home():
